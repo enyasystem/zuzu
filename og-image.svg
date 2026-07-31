@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f6f5f0"/>
+  <circle cx="960" cy="100" r="220" fill="#a9df3b"/>
+  <circle cx="1050" cy="560" r="280" fill="#f37d38"/>
+  <rect x="74" y="70" width="1052" height="490" rx="18" fill="none" stroke="#171717" stroke-width="2"/>
+  <text x="110" y="190" font-family="Arial, sans-serif" font-size="35" font-weight="700" fill="#77766f" letter-spacing="5">ZUZU / DIGITAL MAKER</text>
+  <text x="105" y="350" font-family="Georgia, serif" font-size="118" fill="#171717">Ideas into</text>
+  <text x="105" y="470" font-family="Arial, sans-serif" font-size="118" font-weight="700" fill="#171717">experiences.</text>
+  <text x="105" y="520" font-family="Arial, sans-serif" font-size="22" fill="#77766f">enyaelvis.dev</text>
+</svg>
