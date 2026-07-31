@@ -3,55 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Design</title>
+    <meta name="description" content="Zuzu is a developer crafting thoughtful, high-performing digital experiences.">
+    <title>Zuzu — Digital experiences with character</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-
-    <header>
-        <div class="navbar">
-            <h1>Zuzu</h1>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-            </nav>
-        </div>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="Zuzu home"><span>z</span>uzu<span class="brand-dot">.</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            <span></span><span></span><span></span><span class="sr-only">Open navigation</span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+            <a class="nav-link active" href="#home">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#work">Work</a>
+            <a class="nav-link" href="#contact">Contact</a>
+            <button class="theme-toggle" type="button" aria-label="Switch to light mode">☼</button>
+        </nav>
     </header>
 
-    <section>
-        <div class="hero-content">
-            <div>
-                <h2>Buid a Better Website</h2>
-                <p>A hero section quickly explain what a webiste does Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit eaque, ea neque fuga ipsa maxime quaerat sit impedit, commodi excepturi asperiores ut temporibus aliquid ducimus et quam reprehenderit sed! Obcaecati.</p>
-                <button>Get Started</button>
+    <main>
+        <section class="hero section" id="home">
+            <div class="hero-copy reveal">
+                <p class="eyebrow"><span class="status-dot"></span> Available for select projects</p>
+                <h1>Ideas into <em>experiences</em><br>people remember.</h1>
+                <p class="hero-intro">I'm Zuzu, a developer and digital maker focused on building useful, beautiful things for the web.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#work">See my work <span>↗</span></a>
+                    <a class="text-link" href="#contact">Let's talk <span>→</span></a>
+                </div>
             </div>
-            
-            <img class="hero-img"  src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1143&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <div class="hero-visual reveal" aria-label="Portrait of a cat">
+                <div class="image-frame"><img src="https://images.unsplash.com/photo-1530785602389-07594beb8b73?auto=format&fit=crop&w=1200&q=85" alt="A smiling Nigerian woman wearing a colorful head wrap"></div>
+                <div class="floating-note"><span>Currently</span><strong>making the web<br>feel more human.</strong></div>
+                <div class="circle-label">scroll to explore <span>↓</span></div>
+            </div>
+        </section>
 
-            
-        </div>
-    </section>
+        <section class="marquee" aria-label="Areas of expertise">
+            <div class="marquee-track"><span>FRONTEND DEVELOPMENT</span><b>✳</b><span>UI ENGINEERING</span><b>✳</b><span>DIGITAL CRAFT</span><b>✳</b><span>FRONTEND DEVELOPMENT</span><b>✳</b><span>UI ENGINEERING</span></div>
+        </section>
 
-  <div class="row">
-    <div class="box">box1</div>
-    <div class="box">box2</div>
-    <div class="box">box3</div>
-  </div>
+        <section class="about section" id="about">
+            <div class="section-heading reveal"><p class="eyebrow">01 / A little about me</p><h2>Curious by nature.<br><em>Precise</em> by craft.</h2></div>
+            <div class="about-content reveal">
+                <p class="lead">Good work starts with asking better questions. I care about the details that make a product feel effortless — the rhythm of a page, the clarity of an interaction, the little surprise that makes someone smile.</p>
+                <div class="about-meta"><div><span>Based in</span><strong>Lagos, NG</strong></div><div><span>Experience</span><strong>4+ years</strong></div><div><span>Stack</span><strong>HTML · CSS · JS</strong></div></div>
+            </div>
+        </section>
 
-<br><br>
+        <section class="work section" id="work">
+            <div class="section-heading work-heading reveal"><p class="eyebrow">02 / The visual archive</p><h2>People, places,<br><em>and little details.</em></h2><a class="text-link" href="#contact">Work with me <span>→</span></a></div>
+            <div class="gallery-tools reveal" role="group" aria-label="Filter gallery"><button class="filter-button active" data-filter="all">All</button><button class="filter-button" data-filter="portrait">Portraits</button><button class="filter-button" data-filter="lagos">Lagos</button><button class="filter-button" data-filter="detail">Details</button></div>
+            <div class="gallery-grid">
+                <button class="gallery-item gallery-feature reveal" data-category="portrait lagos" data-full="https://images.unsplash.com/photo-1530785602389-07594beb8b73?auto=format&fit=crop&w=1600&q=90" data-title="Chinemerem, Lagos" aria-label="Open image: Chinemerem, Lagos"><img src="https://images.unsplash.com/photo-1530785602389-07594beb8b73?auto=format&fit=crop&w=1000&q=85" alt="Smiling Nigerian woman wearing a colorful head wrap"><span class="gallery-caption"><small>Portrait / Lagos</small><strong>Chinemerem</strong></span></button>
+                <button class="gallery-item reveal" data-category="portrait" data-full="https://images.unsplash.com/photo-1738363436173-0b49cd20dea8?auto=format&fit=crop&w=1600&q=90" data-title="Green, Lagos" aria-label="Open image: Green, Lagos"><img src="https://images.unsplash.com/photo-1738363436173-0b49cd20dea8?auto=format&fit=crop&w=800&q=85" alt="Nigerian man wearing a green cap in Lagos"><span class="gallery-caption"><small>Portrait / Lagos</small><strong>Green</strong></span></button>
+                <button class="gallery-item gallery-tall reveal" data-category="detail lagos" data-full="https://images.unsplash.com/photo-1531384698654-7f6e477ca221?auto=format&fit=crop&w=1600&q=90" data-title="The maker, Lagos" aria-label="Open image: The maker, Lagos"><img src="https://images.unsplash.com/photo-1531384698654-7f6e477ca221?auto=format&fit=crop&w=900&q=85" alt="Nigerian photographer holding a camera in Lagos"><span class="gallery-caption"><small>Detail / Lagos</small><strong>The maker</strong></span></button>
+                <button class="gallery-item reveal" data-category="portrait" data-full="https://images.unsplash.com/photo-1723221906960-1c5a5febc9c3?auto=format&fit=crop&w=1600&q=90" data-title="Soft light, Enugu" aria-label="Open image: Soft light, Enugu"><img src="https://images.unsplash.com/photo-1723221906960-1c5a5febc9c3?auto=format&fit=crop&w=800&q=85" alt="Nigerian man in a striped shirt"><span class="gallery-caption"><small>Portrait / Enugu</small><strong>Soft light</strong></span></button>
+            </div>
+        </section>
 
-  <div class="cards">
-    <div class="card1">Card 1</div>
-    <div class="card1">Card 2</div>
-    <div class="card1">Card 3</div>
-  </div>
+        <section class="contact section" id="contact">
+            <div class="contact-copy reveal"><p class="eyebrow">03 / Start a conversation</p><h2>Let's make something<br><em>worth remembering.</em></h2><p>Have an idea, a question, or just want to say hello? My inbox is always open.</p><a class="email-link" href="mailto:hello@zuzu.dev">hello@zuzu.dev <span>↗</span></a></div>
+            <form class="contact-form reveal" id="contact-form"><label for="name">Your name</label><input id="name" name="name" type="text" placeholder="Jane Doe" required><label for="email">Your email</label><input id="email" name="email" type="email" placeholder="jane@example.com" required><label for="message">Tell me a little about it</label><textarea id="message" name="message" rows="3" placeholder="I have an idea for..." required></textarea><button class="button button-primary" type="submit">Send message <span>↗</span></button><p class="form-note" role="status"></p></form>
+        </section>
+    </main>
 
-
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, vitae. Mollitia distinctio quisquam, eveniet iure corporis ipsa repudiandae rerum optio explicabo aut magni nam ipsam quibusdam ullam, dicta temporibus possimus.</p>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, vitae. Mollitia distinctio quisquam, eveniet iure corporis ipsa repudiandae rerum optio explicabo aut magni nam ipsam quibusdam ullam, dicta temporibus possimus.</p>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, vitae. Mollitia distinctio quisquam, eveniet iure corporis ipsa repudiandae rerum optio explicabo aut magni nam ipsam quibusdam ullam, dicta temporibus possimus.</p>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, vitae. Mollitia distinctio quisquam, eveniet iure corporis ipsa repudiandae rerum optio explicabo aut magni nam ipsam quibusdam ullam, dicta temporibus possimus.</p>
-  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, vitae. Mollitia distinctio quisquam, eveniet iure corporis ipsa repudiandae rerum optio explicabo aut magni nam ipsam quibusdam ullam, dicta temporibus possimus.</p>
+    <footer class="site-footer"><a class="brand" href="#home"><span>z</span>uzu<span class="brand-dot">.</span></a><p>Designed & built with care © <span id="year"></span></p><div class="socials" aria-label="Social links"><a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9v9M6 6.5v.01M10 18v-5a3 3 0 0 1 6 0v5M10 9v9"></path></svg></a><a href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.2-4-2-5-2m10 4v-3.5c0-1 .1-1.4-.5-2C16.7 15 19 13.8 19 9.5a4 4 0 0 0-1-3c.1-.3.4-1.5-.1-3 0 0-1-.3-3.1 1.2a10.5 10.5 0 0 0-5.6 0C7.1 3.2 6 3.5 6 3.5c-.5 1.5-.2 2.7-.1 3a4 4 0 0 0-1 3c0 4.3 2.3 5.5 5.5 6-.6.5-.6 1.1-.6 2V21"></path></svg></a></div></footer>
+    <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+    <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" aria-hidden="true"><button class="lightbox-close" type="button" aria-label="Close image preview">×</button><button class="lightbox-arrow lightbox-prev" type="button" aria-label="Previous image">←</button><img src="" alt=""><button class="lightbox-arrow lightbox-next" type="button" aria-label="Next image">→</button><p></p></div>
 </body>
 </html>
