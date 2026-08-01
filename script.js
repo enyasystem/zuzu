@@ -1,7 +1,7 @@
 const body = document.body;
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('.site-nav');
-const themeToggle = document.querySelector('.theme-toggle');
+const themeToggles = document.querySelectorAll('.theme-toggle');
 const lightbox = document.querySelector('.lightbox');
 const backToTop = document.querySelector('.back-to-top');
 const galleryItems = [...document.querySelectorAll('.gallery-item')];
@@ -26,11 +26,13 @@ window.addEventListener('scroll', () => {
 
 backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-themeToggle.addEventListener('click', () => {
+themeToggles.forEach((themeToggle) => themeToggle.addEventListener('click', () => {
   const isDark = body.classList.toggle('dark');
-  themeToggle.textContent = isDark ? '☾' : '☼';
-  themeToggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-});
+  themeToggles.forEach((toggle) => {
+    toggle.querySelector('.theme-icon').textContent = isDark ? '☾' : '☼';
+    toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+  });
+}));
 
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
