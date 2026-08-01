@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Zuzu
+N:Zuzu;;;
+ORG:Zuzu Digital
+TITLE:Developer and Digital Maker
+TEL;TYPE=CELL,VOICE:+2347032845816
+EMAIL;TYPE=INTERNET:hello@zuzu.dev
+URL:https://enyaelvis.dev/
+ADR;TYPE=WORK:;;Jos;Plateau;;Nigeria
+NOTE:WhatsApp: +2347032845816
+END:VCARD
