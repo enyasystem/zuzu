@@ -1,4 +1,5 @@
 const body = document.body;
+const pageLoader = document.querySelector('.page-loader');
 const menuToggle = document.querySelector('.menu-toggle');
 const siteNav = document.querySelector('.site-nav');
 const themeToggles = document.querySelectorAll('.theme-toggle');
@@ -6,6 +7,13 @@ const lightbox = document.querySelector('.lightbox');
 const backToTop = document.querySelector('.back-to-top');
 const galleryItems = [...document.querySelectorAll('.gallery-item')];
 let currentGalleryIndex = 0;
+
+const hidePageLoader = () => {
+  pageLoader.classList.add('is-hidden');
+  window.setTimeout(() => pageLoader.remove(), 700);
+};
+window.addEventListener('load', () => window.setTimeout(hidePageLoader, 450), { once: true });
+window.setTimeout(hidePageLoader, 4500);
 
 menuToggle.addEventListener('click', () => {
   const isOpen = siteNav.classList.toggle('open');
